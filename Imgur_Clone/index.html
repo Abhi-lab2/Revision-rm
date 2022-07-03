@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Imgur: The magic of Internet</title>
+    <link rel="stylesheet" href="./styles/nav.css" />
+  </head>
+
+  <style></style>
+
+  <body>
+    <nav class="container" style="background-image: url('./images/bg.png')">
+      <div class="nav-section">
+        <div class="logo">
+          <img src="./images/logo.png" alt="" />
+          <button>
+            <img
+              src="https://s.imgur.com/desktop-assets/desktop-assets/icon-new-post.13ab64f9f36ad8f25ae3544b350e2ae1.svg"
+              alt=""
+            />New Post
+          </button>
+        </div>
+
+        <div class="search">
+          <input
+          oninput="debounce(main,1000)"
+            type="text"
+            id="search_terms"
+            placeholder="Images, #tags, @users oh my!"
+
+          />
+          <!-- <button class="search-btn">
+            <span class="material-icons md-48"> search </span>
+          </button> -->
+        </div>
+        <div id="items"></div>
+
+        <div class="sign">
+          <p><span class="material-icons md-34"> badge </span></p>
+          <!-- <button class="ad-btn">Go Ad-Free</button> -->
+          <p>Sign in</p>
+          <button class="signup-btn"><p>Sign up</p></button>
+        </div>
+      </div>
+      <div class="nav-section2">
+        <div class="heading">
+          <h4>Nobody puts upvotes in the corner.</h4>
+          <div class="tags">
+            <div>EXPLORE TAGS</div>
+            <div>MORE TAGS +</div>
+          </div>
+        </div>
+        <!-- NAV CONTAINER 2 -->
+        <div class="explore-container">
+          
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img1.jpg')"
+            >
+              <div class="items-trending A">
+                <p>Music</p>
+                <p>FEATURED 36,197 posts</p>
+              </div>
+            </div>
+          </div>
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img2.jpg')"
+            >
+              <div class="items-trending B">
+                <p>Dad Jokes</p>
+                <p>7,515 Post</p>
+              </div>
+            </div>
+          </div>
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img3.jpg')"
+            >
+              <div class="items-trending C">
+                <p>Music</p>
+                <p>4500 posts</p>
+              </div>
+            </div>
+          </div>
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img4.jpg')"
+            >
+              <div class="items-trending D">
+                <p>Pride</p>
+                <p>7892 posts</p>
+              </div>
+            </div>
+          </div>
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img5.jpg')"
+            >
+              <div class="items-trending E">
+                <p>
+                  Dream <br />
+                  distination
+                </p>
+                <p>36,197 posts</p>
+              </div>
+            </div>
+          </div>
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img6.jpg')"
+            >
+              <div class="items-trending F">
+                <p>
+                  Nature <br />
+                  Photography
+                </p>
+                <p>1250 posts</p>
+              </div>
+            </div>
+          </div>
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img7.jpg')"
+            >
+              <div class="items-trending G">
+                <p>oc</p>
+                <p>5006 posts</p>
+              </div>
+            </div>
+          </div>
+          <div class="images-trending-c">
+            <div
+              class="item1"
+              style="background-image: url('./images/img8.jpg')"
+            >
+              <div class="items-trending H">
+                <p>Funny</p>
+                <p>9931 posts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- NAV SECTION 3 -->
+        <section>
+          <div class="nav2" style="background-image: url('./images/bg.png')">
+            <div class="nav-section-3">
+              <!-- <div class="small-logo">
+                <img
+                  src="https://s.imgur.com/images/favicon-32x32.png"
+                  alt=""
+                />
+              </div> -->
+              <div class="drop-down">
+                <select name="" id="">
+                  <option value="">MOST VIRAL</option>
+                  <option value="">USER SUBMITTED</option>
+                  <option value="">HIGHEST SCORING</option>
+                </select>
+              </div>
+              <div class="drop-ryt-div">
+                <div class="drop-down">
+                  <select name="" id="">
+                    <option value="">TODAY</option>
+                    <option value="">WEEK</option>
+                    <option value="">MONTH</option>
+                    <option value="">YEAR</option>
+                    <option value="">ALL TIME</option>
+                  </select>
+                  <span class="material-icons md-48"> filter_list </span>
+                  <span class="material-icons md-48"> smart_display </span>
+                  <span class="material-icons md-48"> window </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </nav>
+    <!-- CONTENTS -->
+    <div id="container"></div>
+    <div id="cont"></div>
+    <div id="singlediv"></div>
+    <!-- FOOTER -->
+    <!-- <footer id="footer">
+      <div>
+        <p>© 2022 Imgur, Inc</p>
+        <p>About</p>
+        <p>Terms</p>
+        <p>Privacy</p>
+        <p>Rules</p>
+        <p>Help</p>
+        <p>Emerald</p>
+        <p>Store</p>
+        <p>Advertise</p>
+        <p>Blog</p>
+        <p>Wellness</p>
+      </div>
+      <div><span class="material-icons md-48"> more_horiz </span></div>
+      <div>
+        <button>Git the APP</button>
+      </div>
+    </footer> -->
+  </body>
+</html>
+
+
+
+
+<script type="module">
+
+import { makeAPICall, appendPictures } from "./scripts/main.js";
+
+let images_data = await makeAPICall("https://api.unsplash.com/photos/?client_id=3Bd0M9F1ARcZMbKdu4_A3BIFTDpFonIcA5M-HFdnm8M")
+ console.log(images_data);
+
+
+
+ let parent= document.getElementById("container");
+
+ appendPictures(images_data,parent);
+
+//  let input= document.getElementById("searchbar");
+
+//  input.addEventListener("keypress", (e)=>{
+//     if(e.key==="Enter"){
+
+//         let input_value= document.getElementById("searchbar").value;
+        
+//         localStorage.setItem("search_term",input_value);
+//         window.location.href="search.html";
+//     }
+//  })
+
+
+</script>
+
+<script>
+ // import {appendPictures} from "./scripts/main"
+  
+async function searchImage(){
+
+// get the movie
+try{
+
+let image_item=document.getElementById("search_terms").value
+console.log(image_item)
+
+let url =`https://api.unsplash.com/search/photos?query=${image_item}&client_id=3Bd0M9F1ARcZMbKdu4_A3BIFTDpFonIcA5M-HFdnm8M`;
+
+
+  let res= await fetch(url);
+  let data = await res.json();
+ // console.log("data",data.results);
+  return data.results;
+}
+
+catch(err){
+  console.log("err;",err);
+  
+}
+}
+
+async function main(){
+let data = await searchImage();
+if(data ===undefined){
+ // appendconfusion();
+  return false;
+ 
+}
+
+appendData(data);
+
+//console.log("data:",data);
+
+
+}
+
+
+function appendData(data){
+  let parent= document.getElementById("singlediv");
+  parent.innerHTML=''
+  
+   console.log("dataAppend",data)
+document.getElementById("items").innerHTML="";
+document.getElementById("items").style.background="black";
+document.querySelector("#cont").innerHTML="";
+
+
+
+data.map(elem=>{
+  let subdiv= document.createElement("div");
+  subdiv.setAttribute("id","div");
+
+  subdiv.addEventListener("click",function(){
+    console.log(elem)
+    appendPictures(elem,parent);
+  })
+
+   let p= document.createElement("p");
+   p.onclick= "appendPictures(elem,parent)";
+
+ p.innerText=elem.user.first_name;
+ 
+ subdiv.append(p);
+
+ document.getElementById("items").append(subdiv);
+})
+
+
+}
+
+
+
+//debounc function
+
+let timerId;
+function debounce(func, delay){
+ 
+if(timerId){
+  clearTimeout(timerId);
+}
+timerId=setTimeout(function(){
+  func();
+}, delay);
+}
+
+
+function appendPictures(data,parent){
+  console.log("parent",parent)
+  document.getElementById("container").innerHTML=""
+  
+  
+    let cart=[] 
+        let div= document.createElement("div");
+
+
+        div.onclick=function(){
+         cart.push(data);
+         localStorage.setItem("clicked_item",JSON.stringify(cart));
+           window.location.href="clicked.html"
+        }
+          
+
+        let image=  document.createElement("img");
+        image.src=data.urls.small;
+
+        let p=document.createElement("p");
+        p.innerText=data.user.name;
+
+       div.append(image,p); 
+
+       parent.append(div);
+
+    
+ }
+</script>
+
+

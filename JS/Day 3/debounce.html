@@ -1,0 +1,26 @@
+<!DOCTYPE html>  
+<html>   
+<body>  
+<h1>JavaScript | Debounce checkr</h1>  
+<input type = "button" id="debounce" value = "Click Here">  
+<script>  
+var button = document.getElementById("debounce");  
+const debounce = (func, wait) => {  
+    let debounceTimer  
+    return function() {  
+        const context = this  
+        const args = arguments  
+        clearTimeout(debounceTimer)  
+        debounceTimer = setTimeout(() => func.apply(context, args), wait)  
+    }  
+}   
+button.addEventListener('click', debounce(function() {  
+        alert("hey\n This message will be displayed after 3 seconds, and no matters how many times you click the button.")  
+}, 3000));   //3s
+</script>  
+</body>  
+</html>  
+<!-- Note -->
+<!-- A button is connected to an event listener, which calls a debounce function in the below example. 
+    The Debounce function has two parameters: a function and the other is a number (time). 
+    A Timer declares, which as the name implies, and calls the debounce function after a certain amount of time. -->
